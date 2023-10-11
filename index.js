@@ -1,7 +1,16 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+// function hasTargetSum(array, target) {
+//   // Write your algorithm here
+// }
+function hasTargetSum(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false; // Add this line to explicitly return false if no pair is found
 }
-
 /* 
   Write the Big O time complexity of your function here
 */
